@@ -7,6 +7,6 @@
 // ==/UserScript==
 
 (function(){
-    'use strict';
+//    'use strict';
     alert('hi');
 })();
