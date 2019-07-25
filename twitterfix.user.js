@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     1
+// @version     2
 // @grant       none
 // @include     https://twitter.com
 // ==/UserScript==
 
 (function(){
 //    'use strict';
-    alert('hi');
+    console.log('hi');
 })();
