@@ -1,14 +1,13 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     8
+// @version     9
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
 // ==/UserScript==
 
 'use strict';
-console.log('hi');
 
 var remove_selectors = [
     'div[aria-label="Timeline: Trending now"',
@@ -16,11 +15,13 @@ var remove_selectors = [
 ];
 
 var observer = new window.MutationObserver(function() {
+    var sidebar = document.querySelector('div[data-testid="sidebarColumn"]');
+    sidebar.style.setProperty('width', '120px', 'important');
+
     remove_selectors.forEach(function(s) {
         var e = document.querySelector(s);
         if (e) {
-            e.style.setProperty('border', '1px solid fuchsia', 'important');
-            e.style.setProperty('opacity', '0.2', 'important');
+            e.style.setProperty('opacity', '0.1', 'important');
         }
     });
 });
