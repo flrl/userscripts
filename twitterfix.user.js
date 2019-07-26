@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     7
+// @version     8
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -20,6 +20,7 @@ var observer = new window.MutationObserver(function() {
         var e = document.querySelector(s);
         if (e) {
             e.style.setProperty('border', '1px solid fuchsia', 'important');
+            e.style.setProperty('opacity', '0.2', 'important');
         }
     });
 });
