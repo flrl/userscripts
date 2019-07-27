@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     12
+// @version     13
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -12,6 +12,7 @@
 var remove_selectors = [
     'div[aria-label="Timeline: Trending now"]',
     'aside[aria-label="Who to follow"]',
+    'aside[aria-label="Relevant people"]',
 ];
 
 var observer = new window.MutationObserver(function() {
