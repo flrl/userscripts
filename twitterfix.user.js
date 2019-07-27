@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     11
+// @version     12
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -18,7 +18,6 @@ var observer = new window.MutationObserver(function() {
     // .r-1ovo9ad is where the rhs width: 360px comes from
     var rhs_widthed = document.querySelectorAll('.r-1ovo9ad');
     rhs_widthed.forEach(function(e) {
-        console.log(e.style.getPropertyValue('width'));
         e.style.setProperty('width', '180px', 'important');
     });
 
