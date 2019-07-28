@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     13
+// @version     14
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -18,8 +18,9 @@ var remove_selectors = [
 var observer = new window.MutationObserver(function() {
     // .r-1ovo9ad is where the rhs width: 360px comes from
     var rhs_widthed = document.querySelectorAll('.r-1ovo9ad');
+    var w = Math.floor(window.innerWidth / 6);
     rhs_widthed.forEach(function(e) {
-        e.style.setProperty('width', '180px', 'important');
+        e.style.setProperty('max-width', w + 'px', 'important');
     });
 
     remove_selectors.forEach(function(s) {
