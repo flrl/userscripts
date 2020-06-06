@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        recentsales
 // @namespace   https://github.com/flrl/userscripts/
-// @version     1
+// @version     2
 // @grant       none
 // @include     *
 // ==/UserScript==
@@ -10,6 +10,7 @@
 
 var remove_selectors = [
     'div[id="recent_sales_ticker"]',
+    'div[id="someone-purchased"]',
 ];
 
 var observer = new window.MutationObserver(function() {
