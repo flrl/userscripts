@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        recentsales
 // @namespace   https://github.com/flrl/userscripts/
-// @version     2
+// @version     3
 // @grant       none
 // @include     *
 // ==/UserScript==
@@ -17,6 +17,7 @@ var observer = new window.MutationObserver(function() {
     remove_selectors.forEach(function(s) {
         var e = document.querySelector(s);
         if (e) {
+            console.log("removing: " + e.id);
             e.remove();
         }
     });
