@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        recentsales
 // @namespace   https://github.com/flrl/userscripts/
-// @version     3
+// @version     4
 // @grant       none
 // @include     *
 // ==/UserScript==
@@ -23,4 +23,4 @@ var observer = new window.MutationObserver(function() {
     });
 });
 
-observer.observe(document, { childList: true, subtree: true });
+observer.observe(document, { attributes: true, childList: true, subtree: true });
