@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     14
+// @version     15
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -26,7 +26,7 @@ var observer = new window.MutationObserver(function() {
     remove_selectors.forEach(function(s) {
         var e = document.querySelector(s);
         if (e) {
-            e.style.setProperty('opacity', '0.1', 'important');
+            e.style.setProperty('opacity', '0.05', 'important');
         }
     });
 });
