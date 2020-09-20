@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     15
+// @version     16
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -9,10 +9,13 @@
 
 'use strict';
 
-var remove_selectors = [
-    'div[aria-label="Timeline: Trending now"]',
+var fade_selectors = [
     'aside[aria-label="Who to follow"]',
     'aside[aria-label="Relevant people"]',
+];
+
+var remove_selectors = [
+    'div[aria-label="Timeline: Trending now"]',
 ];
 
 var observer = new window.MutationObserver(function() {
@@ -23,10 +26,17 @@ var observer = new window.MutationObserver(function() {
         e.style.setProperty('max-width', w + 'px', 'important');
     });
 
-    remove_selectors.forEach(function(s) {
+    fade_selectors.forEach(function(s) {
         var e = document.querySelector(s);
         if (e) {
             e.style.setProperty('opacity', '0.05', 'important');
+        }
+    });
+
+    remove_selectors.forEach(function(s) {
+        var e = document.querySelector(s);
+        if (e) {
+            e.remove();
         }
     });
 });
