@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     18
+// @version     19
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -17,6 +17,7 @@ var fade_selectors = [
 var remove_selectors = [
     'div[aria-label="Timeline: Trending now"]',
     'div[aria-label="Timeline: "]',
+    'a[aria-label$="View Tweet analytics"]',
 ];
 
 var observer = new window.MutationObserver(function() {
