@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     23
+// @version     24
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -19,7 +19,6 @@ var remove_selectors = [
     'div[aria-label="Timeline: "]',
     'a[aria-label$="View Tweet analytics"]',
     'aside[aria-label="Get Verified"]',
-    'a[aria-label="Verified"]',
 ];
 
 var observer = new window.MutationObserver(function() {
