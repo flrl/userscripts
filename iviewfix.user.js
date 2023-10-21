@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        iviewfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     1
+// @version     2
 // @grant       none
 // @include     https://iview.abc.net.au
 // @include     https://iview.abc.net.au/*
@@ -10,14 +10,14 @@
 'use strict';
 
 var fix_display_none_selectors = [
-    '.iv-nponE',
+    '.iv-nponE', // the horizontal scroll buttons
 ];
 
 var observer = new window.MutationObserver(function() {
     fix_display_none_selectors.forEach(function(s) {
-        var e = document.querySelector(s);
-        if (e) {
-            e.style.setProperty('display', 'block', 'important');
+        const nodeList = document.querySelectorAll(s);
+        for (let i = 0; i < nodeList.length; i++) {
+            nodeList[i].style.setProperty('display', 'block', 'important');
         }
     });
 });
