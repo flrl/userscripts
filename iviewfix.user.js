@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        iviewfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     2
+// @version     3
 // @grant       none
 // @include     https://iview.abc.net.au
 // @include     https://iview.abc.net.au/*
@@ -10,7 +10,7 @@
 'use strict';
 
 var fix_display_none_selectors = [
-    '.iv-nponE', // the horizontal scroll buttons
+    '.iv-cc3aK', // the horizontal scroll buttons
 ];
 
 var observer = new window.MutationObserver(function() {
