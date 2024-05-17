@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     25
+// @version     26
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
+// @include     https://x.com
+// @include     https://x.com/*
 // ==/UserScript==
 
 'use strict';
