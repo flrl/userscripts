@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     27
+// @version     28
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -21,7 +21,7 @@ var remove_selectors = [
     'div[aria-label="Timeline: "]',
     'a[aria-label$="View Tweet analytics"]',
     'aside[aria-label="Get Verified"]',
-    'aside[aria-label="Subscribe to Premium"]',
+    'aside[aria-label~="Premium"]',
     'aside[aria-label="Showcase your best content with Highlights"]',
 ];
 
