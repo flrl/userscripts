@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        twitterfix
 // @namespace   https://github.com/flrl/userscripts/
-// @version     30
+// @version     31
 // @grant       none
 // @include     https://twitter.com
 // @include     https://twitter.com/*
@@ -25,6 +25,7 @@ var remove_selectors = [
     'aside[aria-label~="Premium"]',
     'aside[aria-label="Showcase your best content with Highlights"]',
     'aside[aria-label="Expiring soon!"]',
+    'a[aria-label="Grok"]',
 ];
 
 var observer = new window.MutationObserver(function() {
